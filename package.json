@@ -1,0 +1,23 @@
+{
+  "name": "create-make",
+  "version": "0.1.0-test",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build:swc": "yarn swc src -o dist/index.js",
+    "build:rollup": "rollup -c"
+  },
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@swc/cli": "^0.3.12",
+    "@swc/core": "^1.4.11",
+    "@types/node": "^20.12.3",
+    "@types/uuid": "^9.0.8",
+    "rollup": "^4.14.0",
+    "tsc": "^2.0.4",
+    "typescript": "^5.4.3"
+  },
+  "dependencies": {
+    "uuid": "^9.0.1"
+  }
+}
