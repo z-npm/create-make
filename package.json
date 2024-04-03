@@ -1,6 +1,6 @@
 {
   "name": "create-make",
-  "version": "0.1.0-test",
+  "version": "0.1.1-test",
   "description": "An advance CLI tools for creating new project from GitHub repository.",
   "repository": {
     "type": "git",
@@ -15,11 +15,14 @@
     "project maker"
   ],
   "files": [
-    "dist"
+    "bin.js"
   ],
-  "main": "dist/index.js",
+  "main": "bin.js",
+  "bin": {
+    "create-make": "./bin.js"
+  },
   "scripts": {
-    "build:swc": "yarn swc src -o dist/index.js",
+    "build:swc": "yarn swc src -o bin.js",
     "build:rollup": "rollup -c"
   },
   "devDependencies": {
