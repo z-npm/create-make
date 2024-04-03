@@ -1,8 +1,23 @@
 {
   "name": "create-make",
   "version": "0.1.0-test",
-  "main": "index.js",
+  "description": "An advance CLI tools for creating new project from GitHub repository.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/z-npm/vite-plugin-swc.git"
+  },
+  "author": {
+    "name": "Zero <github.com/z-nerd>"
+  },
   "license": "MIT",
+  "keywords": [
+    "starter maker",
+    "project maker"
+  ],
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
   "scripts": {
     "build:swc": "yarn swc src -o dist/index.js",
     "build:rollup": "rollup -c"
