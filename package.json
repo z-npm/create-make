@@ -1,10 +1,15 @@
 {
   "name": "create-make",
-  "version": "0.1.2-test",
+  "version": "0.2.0-test",
   "description": "An advance CLI tools for creating new project from GitHub repository.",
+  "type": "module",
+  "main": "bin.js",
+  "bin": {
+    "create-make": "./bin.js"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/z-npm/vite-plugin-swc.git"
+    "url": "git+https://github.com/z-npm/create-make.git"
   },
   "author": {
     "name": "Zero <github.com/z-nerd>"
@@ -15,26 +20,18 @@
     "project maker"
   ],
   "files": [
+    "dist",
     "bin.js"
   ],
-  "main": "bin.js",
-  "bin": {
-    "create-make": "./bin.js"
-  },
   "scripts": {
-    "build": "yarn swc src -o bin.js && chmod +x bin.js",
-    "dev": "yarn build && yarn local:register && yarn test",
-    "local:register": "yarn unlink && yarn link",
-    "test": "yarn create make"
+    "build": "tsc && vite build",
+    "dev": "yarn build && ./bin.js",
+    "local": "yarn build && yarn unlink && yarn link && yarn create make"
   },
   "devDependencies": {
-    "@swc/cli": "^0.3.12",
-    "@swc/core": "^1.4.11",
-    "@types/node": "^20.12.3",
-    "@types/uuid": "^9.0.8",
-    "typescript": "^5.4.3"
-  },
-  "dependencies": {
-    "uuid": "^9.0.1"
+    "@types/node": "^20.12.7",
+    "@z-code/vite-plugin-swc": "^0.3.1",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.10"
   }
 }
