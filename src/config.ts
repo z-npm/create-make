@@ -1,29 +1,31 @@
-import { APP_PATH, CONFIG_PATH, DEFAULT_TEMPLATE } from "./constant"
+import { APP_PATH, CONFIG_PATH, DEFAULT_CATEGORIES } from "./constant"
 import { mkdir, pathExists, readFile, writeFile } from "./utils"
 
-export interface Template {
+export interface Categories {
   [category: string]: {
-    [title: string]: {
+    [template: string]: {
       repo: string
     }
   }
 }
 
-interface Config {
-  templates: Template
+export interface Config {
+  categories: Categories
+  defaultCategories: Categories
+  needInit: boolean
 }
 
-export const getConfig = () => {
+export const getConfig = (): Config => {
   let needInit = false
-  let config: Config = { templates: DEFAULT_TEMPLATE }
+  let config = { categories: {} }
 
   if (pathExists(CONFIG_PATH)) config = JSON.parse(readFile(CONFIG_PATH))
   else needInit = true
 
   if (needInit) {
     mkdir(APP_PATH)
-    writeFile(CONFIG_PATH, JSON.stringify(config))
+    writeFile(CONFIG_PATH, JSON.stringify(config, null, 2))
   }
 
-  return { ...config, needInit }
+  return { ...config, needInit, defaultCategories: DEFAULT_CATEGORIES }
 }

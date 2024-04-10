@@ -1,6 +1,7 @@
 import { defineConfig } from "vite"
 import { swc } from "@z-code/vite-plugin-swc"
 import path from "path"
+import { nodeExternals } from "rollup-plugin-node-externals"
 
 export default defineConfig({
   build: {
@@ -11,13 +12,10 @@ export default defineConfig({
         if (format === "es") return `${name}.js`
         else return `${name}.${format}`
       },
-      formats: ["cjs"],
-    },
-    rollupOptions: {
-      external: ["fs"],
+      formats: ["es", "cjs"],
     },
   },
-  plugins: [swc()],
+  plugins: [nodeExternals(), swc()],
   define: {
     APP_VERSION: JSON.stringify(process.env.npm_package_version),
   },
