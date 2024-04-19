@@ -1,10 +1,16 @@
 import { APP_PATH, CONFIG_PATH, DEFAULT_CATEGORIES } from "./constant"
 import { mkdir, pathExists, readFile, writeFile } from "./utils"
 
+export interface TemplateArgs {
+  value: string
+  str: string
+}
+
 export interface Categories {
   [category: string]: {
     [template: string]: {
       repo: string
+      args: TemplateArgs[]
     }
   }
 }

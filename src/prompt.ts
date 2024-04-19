@@ -1,11 +1,12 @@
 import inquirer from "inquirer"
-import { Config } from "./config"
+import { Config, TemplateArgs } from "./config"
 
 interface ProjectPrompt {
   projectName: string
   category: string
   template: string
   repo: string
+  args: TemplateArgs[]
 }
 
 export const projectPrompt = async (config: Config) => {
@@ -61,5 +62,9 @@ export const projectPrompt = async (config: Config) => {
     ? config.categories[answers1.category][answers2.template].repo
     : config.defaultCategories[answers1.category][answers2.template].repo
 
-  return { ...answers1, ...answers2, repo } as ProjectPrompt
+  const args = isUserDefineCategories
+    ? config.categories[answers1.category][answers2.template].args
+    : config.defaultCategories[answers1.category][answers2.template].args
+
+  return { ...answers1, ...answers2, repo, args } as ProjectPrompt
 }

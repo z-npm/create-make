@@ -16,6 +16,12 @@ export const DEFAULT_CATEGORIES: Categories = {
   TypeScript: {
     "Vanilla Typescript": {
       repo: "https://github.com/z-starter/vite-vanilla-ts.git",
+      args: [
+        {
+          str: "vite-vanilla-ts",
+          value: "projectName",
+        },
+      ],
     },
   },
 }

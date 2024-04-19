@@ -73,13 +73,13 @@ export const filesFindRename = (
 
 export const filesChangeContent = (
   path: string,
-  _oldName: string,
-  _newName: string,
+  oldContent: string,
+  newContent: string,
 ) => {
   findFile(path, true).map((item) => {
     const content = readFileSync(item, { encoding: "utf-8" })
-    if (new RegExp("\\b" + _oldName + "\\b").test(content)) {
-      writeFileSync(item, content.replace(_oldName, _newName), {
+    if (new RegExp("\\b" + oldContent + "\\b").test(content)) {
+      writeFileSync(item, content.replace(oldContent, newContent), {
         encoding: "utf-8",
       })
     }
