@@ -25,3 +25,47 @@ export const DEFAULT_CATEGORIES: Categories = {
     },
   },
 }
+
+export const SCHEMA_PATH = `${APP_PATH}/schema.json`
+
+export const DEFAULT_SCHEMA = {
+  $schema: "https://json-schema.org/draft-07/schema",
+  $id: "https://example.com/product.schema.json",
+  title: "Create Make",
+  description:
+    "An advance CLI tools for creating new project from GitHub repository.",
+  type: "object",
+  properties: {
+    categories: {
+      type: "object",
+      additionalProperties: {
+        type: "object",
+        additionalProperties: {
+          type: "object",
+          properties: {
+            repo: {
+              type: "string",
+              default: "repoUrl",
+            },
+            args: {
+              type: "array",
+              items: {
+                type: "object",
+                properties: {
+                  str: {
+                    type: "string",
+                    default: "contentToReplace",
+                  },
+                  value: {
+                    type: "string",
+                    default: "projectName",
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+  },
+}

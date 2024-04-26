@@ -3,6 +3,8 @@ import { projectPrompt } from "./prompt"
 import { filesChangeContent, gitClone, rmRF } from "./utils"
 
 const boot = async () => {
+  console.log()
+
   const config = getConfig()
   const answer = await projectPrompt(config)
 
