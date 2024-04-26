@@ -15,7 +15,7 @@ MacOS:
 
 Windows:
 ```bash
- C:\Users\$YOUR_USER\AppData\Roaming\create-make/config.json 
+ C:\Users\$YOUR_USER\AppData\Roaming\create-make\config.json 
 ```
 
 
