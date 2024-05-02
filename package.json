@@ -1,6 +1,6 @@
 {
   "name": "create-make",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "An advance CLI tools for creating new project from GitHub repository.",
   "type": "module",
   "main": "bin.js",
@@ -16,6 +16,14 @@
   },
   "license": "MIT",
   "keywords": [
+    "create",
+    "project",
+    "scaffold",
+    "template",
+    "templating",
+    "boilerplate",
+    "make",
+    "starter",
     "starter maker",
     "project maker"
   ],

@@ -1,6 +1,18 @@
 # create-make
 An advance CLI tools for creating new project from GitHub repository.
 
+## Usage
+To use this CLI tools on your system you need to install [Node.js](https://nodejs.org) and optionally you can install [yarn](https://classic.yarnpkg.com) if you want to use the second command below.
+
+```bash
+npx create-make
+```
+
+```bash
+yarn create make
+```
+
+
 ## Config
 
 Linux:
@@ -19,7 +31,7 @@ Windows:
 ```
 
 
-To use your own custom template repo for creating new project
+Example of a config.json to use with your own custom template repo for creating new project
 
 ```json
 {
@@ -40,4 +52,4 @@ To use your own custom template repo for creating new project
 }
 ```
 
-_Note:_ Your custom categories and templates will show up in *Others* part of *Select a category*
+_Note:_ Your custom categories and templates will show up in __Others__ part of __Select a category__
