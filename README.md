@@ -7,7 +7,7 @@ To use this CLI tools on your system you need to install [Node.js](https://nodej
 ```bash
 npx create-make
 ```
-
+or
 ```bash
 yarn create make
 ```
