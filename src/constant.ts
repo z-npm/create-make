@@ -14,11 +14,20 @@ export const CONFIG_PATH = `${APP_PATH}/config.json`
 
 export const DEFAULT_CATEGORIES: Categories = {
   TypeScript: {
-    "Vanilla Typescript": {
+    Vanilla: {
       repo: "https://github.com/z-starter/vite-vanilla-ts.git",
       args: [
         {
           str: "vite-vanilla-ts",
+          value: "projectName",
+        },
+      ],
+    },
+    Phaser: {
+      repo: "https://github.com/z-starter/vite-phaser-ts.git",
+      args: [
+        {
+          str: "vite-phaser-ts",
           value: "projectName",
         },
       ],

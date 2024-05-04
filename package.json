@@ -1,6 +1,6 @@
 {
   "name": "create-make",
-  "version": "0.3.3",
+  "version": "0.4.0",
   "description": "An advance CLI tools for creating new project from GitHub repository.",
   "type": "module",
   "main": "bin.js",
