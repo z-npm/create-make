@@ -32,6 +32,33 @@ export const DEFAULT_CATEGORIES: Categories = {
         },
       ],
     },
+    "Vite Node": {
+      repo: "https://github.com/z-starter/vite-node-ts.git",
+      args: [
+        {
+          str: "vite-node-ts",
+          value: "projectName",
+        },
+      ],
+    },
+    "Rollup Node": {
+      repo: "https://github.com/z-starter/rollup-node-ts.git",
+      args: [
+        {
+          str: "rollup-node-ts",
+          value: "projectName",
+        },
+      ],
+    },
+    "Vite Monorepo": {
+      repo: "https://github.com/z-starter/vite-monorepo-ts.git",
+      args: [
+        {
+          str: "vite-monorepo-ts",
+          value: "projectName",
+        },
+      ],
+    },
   },
 }
 
