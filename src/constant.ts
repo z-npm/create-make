@@ -59,6 +59,15 @@ export const DEFAULT_CATEGORIES: Categories = {
         },
       ],
     },
+    "Rollup Monorepo": {
+      repo: "https://github.com/z-starter/rollup-monorepo-ts.git",
+      args: [
+        {
+          str: "rollup-monorepo-ts",
+          value: "projectName",
+        },
+      ],
+    },
   },
 }
 
