@@ -417,7 +417,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rollup/pluginutils@npm:^5.1.0":
+"@rollup/pluginutils@npm:^5.1.4":
   version: 5.1.4
   resolution: "@rollup/pluginutils@npm:5.1.4"
   dependencies:
@@ -636,7 +636,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@swc/core@npm:^1.5.7":
+"@swc/core@npm:^1.10.8":
   version: 1.10.8
   resolution: "@swc/core@npm:1.10.8"
   dependencies:
@@ -742,21 +742,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@z-code/vite-plugin-swc@npm:^0.5.0":
-  version: 0.5.0
-  resolution: "@z-code/vite-plugin-swc@npm:0.5.0"
+"@z-code/vite-plugin-swc@npm:^0.5.2":
+  version: 0.5.2
+  resolution: "@z-code/vite-plugin-swc@npm:0.5.2"
   dependencies:
-    "@rollup/pluginutils": "npm:^5.1.0"
-    "@swc/core": "npm:^1.5.7"
+    "@rollup/pluginutils": "npm:^5.1.4"
+    "@swc/core": "npm:^1.10.8"
   peerDependencies:
-    rollup: ^3 || ^4
-    vite: ^4 || ^5
+    rollup: ">3"
+    vite: ">4"
   peerDependenciesMeta:
     rollup:
       optional: true
     vite:
       optional: true
-  checksum: 10c0/74144df8330878bf97cd8e2897ba5e9b7c2d23a4ab7d7fc815d51efdd47650033b0b41c40423366ace3e38b562f3542fa6d64708295b27e4fe1f502890d2996c
+  checksum: 10c0/3404071e607842af4165de4fac976808556beef3568b35b5abefcb1bba04f2001d2bafccd26046013fe6b6a36ac16a6bf0b586261d900f75db1f530bd826cd6a
   languageName: node
   linkType: hard
 
@@ -892,7 +892,7 @@ __metadata:
   dependencies:
     "@types/inquirer": "npm:^9.0.7"
     "@types/node": "npm:^22.10.7"
-    "@z-code/vite-plugin-swc": "npm:^0.5.0"
+    "@z-code/vite-plugin-swc": "npm:^0.5.2"
     inquirer: "npm:^12.3.2"
     rollup-plugin-node-externals: "npm:^8.0.0"
     typescript: "npm:^5.7.3"
