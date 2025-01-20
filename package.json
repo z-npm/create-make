@@ -1,12 +1,10 @@
 {
   "name": "create-make",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "An advance CLI tools for creating new project from GitHub repository.",
   "type": "module",
   "main": "bin.js",
-  "bin": {
-    "create-make": "./bin.js"
-  },
+  "bin": "./bin.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/z-npm/create-make.git"
@@ -38,13 +36,14 @@
   },
   "devDependencies": {
     "@types/inquirer": "^9.0.7",
-    "@types/node": "^20.12.7",
-    "@z-code/vite-plugin-swc": "^0.3.3",
-    "rollup-plugin-node-externals": "^7.1.2",
-    "typescript": "^5.4.5",
-    "vite": "^5.2.10"
+    "@types/node": "^22.10.7",
+    "@z-code/vite-plugin-swc": "^0.5.0",
+    "rollup-plugin-node-externals": "^8.0.0",
+    "typescript": "^5.7.3",
+    "vite": "^6.0.9"
   },
   "dependencies": {
-    "inquirer": "^9.2.19"
-  }
+    "inquirer": "^12.3.2"
+  },
+  "packageManager": "yarn@4.6.0"
 }
