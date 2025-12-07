@@ -7,7 +7,7 @@ on:
     branches: ["zero"]
 
 env:
-  NODE_VERSION: "22.x"
+  NODE_VERSION: "24.x"
   NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
   REGISTRY: "https://registry.npmjs.org"
   SCOPE: ""
@@ -21,8 +21,8 @@ jobs:
       contents: read
       packages: write
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
         with:
           node-version: ${{ env.NODE_VERSION }}
           registry-url: ${{ env.REGISTRY }}
