@@ -6,8 +6,8 @@ import { filesChangeContent, gitClone, rmRF, pathExists } from "./utils"
 const boot = async () => {
   console.log()
 
-  const cli = await getCli()
   const config = getConfig()
+  const cli = await getCli()
   const answer = await projectPrompt(cli, config)
 
   const PROJECT_PATH = `${process.cwd()}/${answer.projectName}`
