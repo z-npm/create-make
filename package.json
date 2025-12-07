@@ -1,6 +1,6 @@
 {
   "name": "create-make",
-  "version": "0.6.2",
+  "version": "0.7.0",
   "description": "An advance CLI tools for creating new project from GitHub repository.",
   "type": "module",
   "main": "bin.js",
@@ -10,7 +10,7 @@
     "url": "git+https://github.com/z-npm/create-make.git"
   },
   "author": {
-    "name": "Zero <github.com/z-nerd>"
+    "name": "Zero <github.com/zero-red-dev>"
   },
   "license": "MIT",
   "keywords": [
@@ -35,15 +35,17 @@
     "local": "yarn build && yarn unlink && yarn link && yarn create make"
   },
   "devDependencies": {
-    "@types/inquirer": "^9.0.7",
-    "@types/node": "^22.10.7",
+    "@types/inquirer": "^9.0.9",
+    "@types/node": "^24.10.1",
+    "@types/yargs": "^17.0.35",
     "@z-code/vite-plugin-swc": "^0.5.2",
-    "rollup-plugin-node-externals": "^8.0.0",
-    "typescript": "^5.7.3",
-    "vite": "^6.0.9"
+    "rollup-plugin-node-externals": "^8.1.2",
+    "typescript": "^5.9.3",
+    "vite": "^7.2.6"
   },
   "dependencies": {
-    "inquirer": "^12.3.2"
+    "inquirer": "^13.0.2",
+    "yargs": "^18.0.0"
   },
-  "packageManager": "yarn@4.6.0"
+  "packageManager": "yarn@4.12.0"
 }
