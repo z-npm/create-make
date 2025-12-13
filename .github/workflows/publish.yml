@@ -8,7 +8,6 @@ on:
 
 env:
   NODE_VERSION: "24.x"
-  NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
   REGISTRY: "https://registry.npmjs.org"
   SCOPE: ""
   # USER: ${{ github.actor }}
@@ -35,4 +34,6 @@ jobs:
       - run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
+      - run: npm install -g npm@latest
+      - run: npm ci
       - run: npm publish --access public
