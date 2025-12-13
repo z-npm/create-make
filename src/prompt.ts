@@ -1,6 +1,7 @@
 import inquirer, { Question } from "inquirer"
 import { Config, TemplateArgs } from "./config"
 import { Cli } from "./cli"
+import { CONFIG_PATH } from "./constant"
 
 
 interface ProjectPrompt {
@@ -20,7 +21,7 @@ export const projectPrompt = async (cli: Cli, config: Config): Promise<ProjectPr
       for (const template in dcArr[category]) {
         const args = dcArr[category][template].args
         const repo = dcArr[category][template].repo
-        tStrArr.push(args[0].str)
+        tStrArr.push(template)
 
         if (args[0].str === cli.template)
           return { category, template, projectName: cli.projectName, args, repo }
@@ -44,18 +45,22 @@ export const projectPrompt = async (cli: Cli, config: Config): Promise<ProjectPr
       for (const template in ucArr[category]) {
         const args = ucArr[category][template].args
         const repo = ucArr[category][template].repo
-        tStrArr.push(args[0].str)
+        tStrArr.push(template)
 
         if (args[0].str === cli.otherTemplate)
           return { category, template, projectName: cli.projectName, args, repo }
       }
     }
-    console.error(
-      `❌ Error: Template "${cli.otherTemplate}" was not found.\n` +
-      `Available templates:\n` +
-      `  • ${tStrArr.join('\n  • ')}\n` +
-      `Please select one of the templates above.`
-    );
+
+    const eMsg = (tStrArr.length > 0) ?
+      (`Available templates:\n` +
+        `  • ${tStrArr.join('\n  • ')}\n` +
+        `Please select one of the templates above.`)
+      : (`\nNo custom templates are currently configured.\n` +
+        `Please check your configuration at:\n  ${CONFIG_PATH}\n\n` +
+        `To add templates, edit the configuration file and add template definitions.`)
+
+    console.error(`❌ Error: Template "${cli.otherTemplate}" was not found.\n${eMsg}`);
     process.exit(2)
   }
 
@@ -102,9 +107,23 @@ export const projectPrompt = async (cli: Cli, config: Config): Promise<ProjectPr
       ).category
     }
 
-    const templates = isUserDefineCategories
-      ? Object.keys(config.categories[answers1.category])
-      : Object.keys(config.defaultCategories[answers1.category])
+    const templates = []
+    if (isUserDefineCategories)
+      for (const key in config.categories[answers1.category]) {
+        const tobj = config.categories[answers1.category][key]
+        if (tobj.name)
+          templates.push({ name: `${tobj.name}(${key})`, value: key })
+        else
+          templates.push({ name: key, value: key })
+      }
+    else
+      for (const key in config.defaultCategories[answers1.category]) {
+        const tobj = config.defaultCategories[answers1.category][key]
+        if (tobj.name)
+          templates.push({ name: `${tobj.name}(${key})`, value: key })
+        else
+          templates.push({ name: key, value: key })
+      }
 
     const answers2 = await inquirer.prompt([
       {

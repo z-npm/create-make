@@ -14,7 +14,8 @@ export const CONFIG_PATH = `${APP_PATH}/config.json`
 
 export const DEFAULT_CATEGORIES: Categories = {
   TypeScript: {
-    Vanilla: {
+    "vite-vanilla-ts": {
+      name: "Vanilla",
       repo: "https://github.com/z-starter/vite-vanilla-ts.git",
       args: [
         {
@@ -23,7 +24,8 @@ export const DEFAULT_CATEGORIES: Categories = {
         },
       ],
     },
-    Phaser: {
+    "vite-phaser-ts": {
+      name: "Phaser",
       repo: "https://github.com/z-starter/vite-phaser-ts.git",
       args: [
         {
@@ -32,7 +34,8 @@ export const DEFAULT_CATEGORIES: Categories = {
         },
       ],
     },
-    "Vite Node": {
+    "vite-node-ts": {
+      name: "Vite Node",
       repo: "https://github.com/z-starter/vite-node-ts.git",
       args: [
         {
@@ -41,7 +44,8 @@ export const DEFAULT_CATEGORIES: Categories = {
         },
       ],
     },
-    "Rollup Node": {
+    "rollup-node-ts": {
+      name: "Rollup Node",
       repo: "https://github.com/z-starter/rollup-node-ts.git",
       args: [
         {
@@ -50,7 +54,8 @@ export const DEFAULT_CATEGORIES: Categories = {
         },
       ],
     },
-    "Vite Monorepo": {
+    "vite-monorepo-ts": {
+      name: "Vite Monorepo",
       repo: "https://github.com/z-starter/vite-monorepo-ts.git",
       args: [
         {
@@ -59,7 +64,8 @@ export const DEFAULT_CATEGORIES: Categories = {
         },
       ],
     },
-    "Rollup Monorepo": {
+    "rollup-monorepo-ts": {
+      name: "Rollup Monorepo",
       repo: "https://github.com/z-starter/rollup-monorepo-ts.git",
       args: [
         {
@@ -78,7 +84,7 @@ export const DEFAULT_SCHEMA = {
   $id: "https://example.com/product.schema.json",
   title: "Create Make",
   description:
-    "An advance CLI tools for creating new project from GitHub repository.",
+    "An advanced CLI tool for creating projects from GitHub repositories or custom templates with lightning-fast setup.",
   type: "object",
   properties: {
     categories: {
@@ -88,6 +94,10 @@ export const DEFAULT_SCHEMA = {
         additionalProperties: {
           type: "object",
           properties: {
+            name: {
+              type: "string",
+              default: "templateName"
+            },
             repo: {
               type: "string",
               default: "repoUrl",

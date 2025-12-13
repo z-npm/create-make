@@ -1,6 +1,5 @@
 # create-make
 [![npm](https://img.shields.io/npm/v/create-make)](https://www.npmjs.com/package/create-make) [![license](https://img.shields.io/npm/l/create-make)](https://www.npmjs.com/package/create-make)
-
 An advanced CLI tool for creating projects from GitHub repositories or custom templates with lightning-fast setup.
 
 ## ✨ Features
@@ -135,11 +134,11 @@ Built-in Templates (TypeScript Category)
 
 __Pro Tip__: Create an alias for even faster usage! Add this to your shell config:
 ```bash
-alias ym="yarn make"
+alias cm="yarn create make"
 ```
 Then use:
 ```bash
-ym my-project -t vite-node-ts
+cm my-project -t vite-node-ts
 ```
 
 ## ⚙️ Configuration
@@ -169,17 +168,18 @@ Create a __config.json__ file to add your custom templates:
   "categories": {
     "Backend": {
       "express-api": {
+        "name": "Node Express",
         "repo": "https://github.com/username/express-template.git",
         "args": [
           {
             "str": "PROJECT_NAME",
             "value": "projectName"
-          }
-        ]
+          }                                     ]
       }
     },
     "Frontend": {
       "react-ts": {
+        "name": "React TypeScript",
         "repo": "https://github.com/username/react-typescript-template.git",
         "args": [
           {
@@ -197,6 +197,7 @@ Create a __config.json__ file to add your custom templates:
 
 | Property | Type | Description |
 |:--------:|:-----------------:|:----:|
+| name | string | Name of the Template  |
 | repo | string | Git repository URL to clone |
 | args | array | String replacements in template files |
 | args[].str | string | Text in template files to replace |
@@ -205,6 +206,7 @@ Create a __config.json__ file to add your custom templates:
 
 ## 🎮 How It Works
 
+```mermaid
 graph TD
     A[Start] --> B{Project name provided?}
     B -->|No| C[Prompt for project name]
@@ -224,6 +226,7 @@ graph TD
     N --> O[Create project]
     F --> O
     G --> O
+```
 
 
 ## 🐛 Troubleshooting

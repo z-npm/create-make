@@ -9,6 +9,7 @@ export interface Cli {
 }
 
 export const getCli = async (): Promise<Cli> => {
+  const version = import.meta.env.VITE_APP_VERSION
   const yargsInstance = yargs(hideBin(process.argv))
     .scriptName('create-make')
     .usage('Usage: $0 [projectName] [options]')
@@ -61,7 +62,7 @@ For more information, visit: https://github.com/z-npm/create-make
     // .wrap(Math.min(100, yargs.terminalWidth()))
     .help('help', 'Show this help message')
     .alias('help', 'h')
-    .version()
+    .version(version)
     .alias('v', 'version')
     .demandCommand(0, 1, 'Provide at most one project name')
     .strict();

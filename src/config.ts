@@ -15,6 +15,7 @@ export interface TemplateArgs {
 export interface Categories {
   [category: string]: {
     [template: string]: {
+      name?: string
       repo: string
       args: TemplateArgs[]
     }
