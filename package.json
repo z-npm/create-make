@@ -51,7 +51,9 @@
   ],
   "type": "module",
   "main": "bin.js",
-  "bin": "./bin.js",
+  "bin": {
+    "create-make": "bin.js"
+  },
   "files": [
     "dist",
     "bin.js"
