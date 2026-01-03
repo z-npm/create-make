@@ -128,9 +128,7 @@ Built-in Templates (TypeScript Category)
 | vite-vanilla-ts | Vanilla TypeScript with Vite | Vite + TypeScript |
 | vite-phaser-ts | Game development with Phaser | Vite + Phaser + TypeScript |
 | vite-node-ts | Node.js backend with Vite | Vite + Node.js + TypeScript |
-| rollup-node-ts | Node.js with Rollup | Rollup + Node.js + TypeScript |
 | vite-monorepo-ts | Monorepo setup with Vite | Vite + Monorepo + TypeScript |
-| rollup-monorepo-ts | Monorepo setup with Rollup | Rollup + Monorepo + TypeScript |
 
 __Pro Tip__: Create an alias for even faster usage! Add this to your shell config:
 ```bash
@@ -167,24 +165,21 @@ Create a __config.json__ file to add your custom templates:
   "$schema": "./schema.json",
   "categories": {
     "Backend": {
-      "express-api": {
-        "name": "Node Express",
-        "repo": "https://github.com/username/express-template.git",
-        "args": [
-          {
-            "str": "PROJECT_NAME",
-            "value": "projectName"
+      "vite-node-ts": {
+        "name": "Vite Node",
+        "repo": "https://github.com/z-starter/vite-node-ts",
+        "args": [                                       {
+            "str": "vite-node-ts",                                                         "value": "projectName"
           }                                     ]
-      }
-    },
+      }                                           },
     "Frontend": {
-      "react-ts": {
-        "name": "React TypeScript",
-        "repo": "https://github.com/username/react-typescript-template.git",
+      "vite-vanilla-ts": {
+        "name": "Vite Vanilla",
+        "repo": "https://github.com/z-starter/vite-vanilla-ts",
         "args": [
           {
-            "str": "APP_NAME",
-            "value": "projectName"
+            "str": "vite-vanilla-ts",
+                                             "value": "projectName"
           }
         ]
       }

@@ -1,4 +1,3 @@
-// import { version } from "../package.json"
 import { Categories } from "./config"
 
 export const OS_NAME = process.platform
@@ -8,7 +7,6 @@ export const OS_APP_HOME =
     ? process.env.HOME + "/Library/Preferences"
     : process.env.HOME + "/.local/share")
 
-// export const APP_VERSION = version
 export const APP_PATH = `${OS_APP_HOME}/create-make`
 export const CONFIG_PATH = `${APP_PATH}/config.json`
 
@@ -44,32 +42,12 @@ export const DEFAULT_CATEGORIES: Categories = {
         },
       ],
     },
-    "rollup-node-ts": {
-      name: "Rollup Node",
-      repo: "https://github.com/z-starter/rollup-node-ts.git",
-      args: [
-        {
-          str: "rollup-node-ts",
-          value: "projectName",
-        },
-      ],
-    },
     "vite-monorepo-ts": {
       name: "Vite Monorepo",
       repo: "https://github.com/z-starter/vite-monorepo-ts.git",
       args: [
         {
           str: "vite-monorepo-ts",
-          value: "projectName",
-        },
-      ],
-    },
-    "rollup-monorepo-ts": {
-      name: "Rollup Monorepo",
-      repo: "https://github.com/z-starter/rollup-monorepo-ts.git",
-      args: [
-        {
-          str: "rollup-monorepo-ts",
           value: "projectName",
         },
       ],
