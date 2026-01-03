@@ -168,10 +168,14 @@ Create a __config.json__ file to add your custom templates:
       "vite-node-ts": {
         "name": "Vite Node",
         "repo": "https://github.com/z-starter/vite-node-ts",
-        "args": [                                       {
-            "str": "vite-node-ts",                                                         "value": "projectName"
-          }                                     ]
-      }                                           },
+        "args": [
+          {
+            "str": "vite-node-ts",
+            "value": "projectName"
+          }
+        ]
+      }
+    },
     "Frontend": {
       "vite-vanilla-ts": {
         "name": "Vite Vanilla",
@@ -179,7 +183,7 @@ Create a __config.json__ file to add your custom templates:
         "args": [
           {
             "str": "vite-vanilla-ts",
-                                             "value": "projectName"
+            "value": "projectName"
           }
         ]
       }
