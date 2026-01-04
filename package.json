@@ -1,6 +1,6 @@
 {
   "name": "create-make",
-  "version": "0.7.4",
+  "version": "0.7.5",
   "description": "An advanced CLI tool for creating projects from GitHub repositories or custom templates with lightning-fast setup.",
   "homepage": "https://github.com/z-npm/create-make#readme",
   "docs": "https://github.com/z-npm/create-make#readme",

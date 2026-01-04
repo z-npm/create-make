@@ -1,6 +1,11 @@
 # create-make
 [![npm](https://img.shields.io/npm/v/create-make)](https://www.npmjs.com/package/create-make) [![license](https://img.shields.io/npm/l/create-make)](https://www.npmjs.com/package/create-make)
+
 An advanced CLI tool for creating projects from GitHub repositories or custom templates with lightning-fast setup.
+
+## 🎥 Video Demo
+
+[![Watch the video](https://img.youtube.com/vi/ZSE7zMnBFkw/maxresdefault.jpg)](https://www.youtube.com/watch?v=ZSE7zMnBFkw)
 
 ## ✨ Features
 - ⚡ Blazing Fast: Clone templates directly from GitHub or local configs
