@@ -134,6 +134,7 @@ Built-in Templates (TypeScript Category)
 | vite-phaser-ts | Game development with Phaser | Vite + Phaser + TypeScript |
 | vite-node-ts | Node.js backend with Vite | Vite + Node.js + TypeScript |
 | vite-monorepo-ts | Monorepo setup with Vite | Vite + Monorepo + TypeScript |
+| vite-lib-ts | TypeScript Library with Vite | Vite + TypeScript Library |
 
 __Pro Tip__: Create an alias for even faster usage! Add this to your shell config:
 ```bash

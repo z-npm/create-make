@@ -52,6 +52,16 @@ export const DEFAULT_CATEGORIES: Categories = {
         },
       ],
     },
+    "vite-lib-ts": {
+      name: "Vite Library",
+      repo: "https://github.com/z-starter/vite-lib-ts.git",
+      args: [
+        {
+          str: "vite-lib-ts",
+          value: "projectName",
+        },
+      ],
+    },
   },
 }
 
