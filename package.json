@@ -1,6 +1,6 @@
 {
   "name": "create-make",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "description": "An advanced CLI tool for creating projects from GitHub repositories or custom templates with lightning-fast setup.",
   "homepage": "https://github.com/z-npm/create-make#readme",
   "docs": "https://github.com/z-npm/create-make#readme",
@@ -62,16 +62,16 @@
     "local": "yarn build && yarn unlink && yarn link && yarn create make"
   },
   "devDependencies": {
+    "@o.z/vite-plugin-swc": "^0.6.1",
     "@types/inquirer": "^9.0.9",
-    "@types/node": "^25.0.9",
+    "@types/node": "^25.2.3",
     "@types/yargs": "^17.0.35",
-    "@z-code/vite-plugin-swc": "^0.5.5",
     "rollup-plugin-node-externals": "^8.1.2",
     "typescript": "^5.9.3",
     "vite": "^7.3.1"
   },
   "dependencies": {
-    "inquirer": "^13.2.0",
+    "inquirer": "^13.2.4",
     "yargs": "^18.0.0"
   },
   "engines": {
