@@ -62,6 +62,16 @@ export const DEFAULT_CATEGORIES: Categories = {
         },
       ],
     },
+    "vite-cli-ts": {
+      name: "Vite Cli",
+      repo: "https://github.com/z-starter/vite-cli-ts.git",
+      args: [
+        {
+          str: "vite-cli-ts",
+          value: "projectName",
+        },
+      ],
+    },
   },
 }
 
@@ -84,7 +94,7 @@ export const DEFAULT_SCHEMA = {
           properties: {
             name: {
               type: "string",
-              default: "templateName"
+              default: "templateName",
             },
             repo: {
               type: "string",
