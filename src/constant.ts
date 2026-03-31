@@ -72,6 +72,16 @@ export const DEFAULT_CATEGORIES: Categories = {
         },
       ],
     },
+    "vite-ecs-ts": {
+      name: "Vite ECS",
+      repo: "https://github.com/z-starter/vite-ecs-ts.git",
+      args: [
+        {
+          str: "vite-ecs-ts",
+          value: "projectName",
+        },
+      ],
+    },
   },
 }
 
