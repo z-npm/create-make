@@ -1,6 +1,6 @@
 {
   "name": "create-make",
-  "version": "0.11.0",
+  "version": "0.12.0",
   "description": "An advanced CLI tool for creating projects from GitHub repositories or custom templates with lightning-fast setup.",
   "homepage": "https://github.com/z-npm/create-make#readme",
   "docs": "https://github.com/z-npm/create-make#readme",
@@ -62,17 +62,17 @@
     "local": "yarn build && yarn unlink && yarn link && yarn create make"
   },
   "devDependencies": {
-    "@o.z/vite-plugin-swc": "^0.7.0",
-    "@types/inquirer": "^9.0.9",
-    "@types/node": "^25.5.0",
+    "@o.z/vite-plugin-swc": "^0.19.0",
+    "@types/inquirer": "^9.0.10",
+    "@types/node": "^26.4.0",
     "@types/yargs": "^17.0.35",
-    "rollup-plugin-node-externals": "^8.1.2",
+    "rollup-plugin-node-externals": "^9.0.1",
     "typescript": "^6.0.2",
-    "vite": "^8.0.3"
+    "vite": "^8.2.2"
   },
   "dependencies": {
-    "inquirer": "^13.3.2",
-    "yargs": "^18.0.0"
+    "inquirer": "^14.2.0",
+    "yargs": "^18.1.0"
   },
   "engines": {
     "node": ">=18.0.0",
@@ -82,5 +82,5 @@
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
-  "packageManager": "yarn@4.13.0"
+  "packageManager": "yarn@4.18.0"
 }
